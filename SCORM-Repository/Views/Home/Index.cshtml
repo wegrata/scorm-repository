@@ -1,0 +1,24 @@
+﻿@model Dictionary<String, IEnumerable<SCORM_Repository.Models.SCORMObject>>
+<script type="text/javascript">
+    $(document).ready(function () {
+        console.debug('got here');
+        $("#tabs").tabs();
+    });
+</script>
+<div id="tabs">
+    <ul>
+        @foreach (var categoryGroup in Model)
+        {
+            <li><a href="#@categoryGroup.Key">@categoryGroup.Key</a></li>
+        
+        }
+    </ul>
+    @foreach (var categoryGroup in Model)
+    {
+        <div id="@categoryGroup.Key">
+            @{//this is dumb but it can't tell categoryGroup is an IEnumerable<> unless i do this
+        Html.RenderPartial("SCORMObjectsListView", categoryGroup.Value);
+            }
+        </div>
+    }
+</div>

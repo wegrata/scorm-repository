@@ -1,0 +1,3 @@
+[submodule "NoRM"]
+	path = NoRM
+	url = https://github.com/atheken/NoRM.git

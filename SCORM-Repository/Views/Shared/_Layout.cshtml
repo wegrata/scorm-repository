@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/jquery-ui-1.8.14.custom.css")" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/jquery-ui.js"
+        type="text/javascript"></script>
+</head>
+<body>
+    <div class="page">
+        <div id="header">
+            <div id="title">
+                <h1>@Html.ActionLink("ADL SCORM Repository", "Index", "Home")</h1>
+            </div>
+            <div>
+                @if (User == null || !User.Identity.IsAuthenticated)
+                {
+                    @Html.ActionLink("Login", "Login", "User")
+                }
+                else
+                {
+                    <span>Welcome @User.Identity.Name</span> @Html.ActionLink("Logout", "Logout", "User");
+                }
+            </div>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <div id="searchDisplay" style="height: 35px">
+                @using (Html.BeginForm("Details", "Results", FormMethod.Post, new { style = "height:100%;" }))
+                {
+                    @Html.TextBox("id", "", new { style = "width:90%" })
+                    <input type="submit" value="Search" style="height: 100%;" />                
+                }
+            </div>
+            <div id="menucontainer">
+                <ul id="menu">
+                    <li>@Html.ActionLink("Upload", "Index", "Upload")</li>
+                </ul>
+            </div>
+        </div>
+        <div id="main">
+            @RenderBody()
+        </div>
+        <div id="footer">
+        </div>
+    </div>
+</body>
+</html>

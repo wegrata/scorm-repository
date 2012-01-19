@@ -1,0 +1,26 @@
+﻿@model SCORM_Repository.Models.SCORMObject
+<fieldset>
+    <legend>@Html.DisplayFor(model => model.Title)</legend>
+    <div class="display-label">
+        @Html.LabelFor(model => model.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Description)
+    </div>
+    @foreach (var file in Model.Files)
+    {
+        switch (file.Type)
+        {
+            case SCORM_Repository.Models.FileReference.FileType.SCORMPackage:
+        <div>
+            @Html.ActionLink(file.Filename, "Package", "Content", new { id = file.FileId }, new { })
+        </div>
+       break;
+            case SCORM_Repository.Models.FileReference.FileType.Screenshot:
+        <div>
+            <img src=@String.Format("/Content/ScreenShot/{0}", file.FileId)  />
+        </div>
+                break;
+        }
+    }
+</fieldset>

@@ -1,0 +1,12 @@
+C:\Users\gratat\adl-repo\adl-repo\SCORM-Repository\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\gratat\adl-repo\adl-repo\SCORM-Repository\bin\SCORM-Repository.dll
+C:\Users\gratat\adl-repo\adl-repo\SCORM-Repository\bin\SCORM-Repository.pdb
+C:\Users\gratat\adl-repo\adl-repo\SCORM-Repository\bin\DotNetOpenAuth.dll
+C:\Users\gratat\adl-repo\adl-repo\SCORM-Repository\bin\Norm.dll
+C:\Users\gratat\adl-repo\adl-repo\SCORM-Repository\bin\Norm.pdb
+C:\Users\gratat\adl-repo\adl-repo\SCORM-Repository\bin\Norm.xml
+C:\Users\gratat\adl-repo\adl-repo\SCORM-Repository\bin\DotNetOpenAuth.pdb
+C:\Users\gratat\adl-repo\adl-repo\SCORM-Repository\bin\DotNetOpenAuth.xml
+C:\Users\gratat\adl-repo\adl-repo\SCORM-Repository\bin\sr\DotNetOpenAuth.resources.dll
+C:\Users\gratat\adl-repo\adl-repo\SCORM-Repository\obj\Debug\SCORM-Repository.dll
+C:\Users\gratat\adl-repo\adl-repo\SCORM-Repository\obj\Debug\SCORM-Repository.pdb
